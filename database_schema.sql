@@ -2,9 +2,9 @@
 -- PostgreSQL database dump
 --
 
-\restrict ZidQ6CwJUTkMcas6wgBhhf3uDpif4iwgRT75nV02TbaLWmmGIvYXRR6Q5h1QzvB
+\restrict yttPd3dRNmrWiglGOcd9GcbO8Plxb33T5cufNAQ2ZezKr9P4o12kr32Yighet9t
 
--- Dumped from database version 18.2 (94b8da0)
+-- Dumped from database version 18.6 (2078fcb)
 -- Dumped by pg_dump version 18.3
 
 SET statement_timeout = 0;
@@ -58,6 +58,24 @@ CREATE TABLE public.ins_mortgage_rate (
 
 
 --
+-- Name: ins_mortgage_rate_pred; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.ins_mortgage_rate_pred (
+    date date NOT NULL,
+    bank_product character varying(32) NOT NULL,
+    floating double precision,
+    _6_months double precision,
+    _1_year double precision,
+    _18_months double precision,
+    _2_years double precision,
+    _3_years double precision,
+    _4_years double precision,
+    _5_years double precision
+);
+
+
+--
 -- Name: ocr; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -100,6 +118,14 @@ ALTER TABLE ONLY public.ins_mortgage_rate
 
 
 --
+-- Name: ins_mortgage_rate_pred ins_mortgage_rate_pred_pk; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.ins_mortgage_rate_pred
+    ADD CONSTRAINT ins_mortgage_rate_pred_pk PRIMARY KEY (date, bank_product);
+
+
+--
 -- Name: ocr ocr_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -119,5 +145,5 @@ ALTER TABLE ONLY public.wholesale_swap_rate
 -- PostgreSQL database dump complete
 --
 
-\unrestrict ZidQ6CwJUTkMcas6wgBhhf3uDpif4iwgRT75nV02TbaLWmmGIvYXRR6Q5h1QzvB
+\unrestrict yttPd3dRNmrWiglGOcd9GcbO8Plxb33T5cufNAQ2ZezKr9P4o12kr32Yighet9t
 
