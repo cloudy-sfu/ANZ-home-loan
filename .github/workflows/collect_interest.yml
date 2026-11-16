@@ -2,7 +2,7 @@ name: Collect mortgage interest rates
 
 on:
   schedule:
-    - cron: '0 5 * * 1-5'  # Business days 5:00 UTC
+    - cron: '45 4 * * 1-5'  # Business days 4:45 UTC
   workflow_dispatch:
 
 jobs:
